@@ -1,0 +1,60 @@
+##clase 2   
+
+node js :
+es un entorno de ejecucion de javascrip sin necesidad de usar el navegador . 
+
+npm:
+es un gestor de instalacion de paquetes y librerias de javascrip.
+
+
+para correr proyecto de react utilizamos npm star en la terminal y para terminar ujsamos control + c.
+
+
+npm run dev sirve para correr el proyecto en el nabvegador.
+
+ahora con react vamos a trabajar con modulos del proyecto ejemplo
+main.js footer.js ,, funcionx.js (o tambien llamados componentes) y asi .
+
+los comoponentes inicain su nombre con una mayuscula seguido de minuscals y se guardan en la carpeta erc.
+
+
+
+todo lo que este dentro de una funcion sera la logica y lo que este dentro del return sera el renderizado o jsx
+ejmplo:
+funcion app() {
+                .
+    a+b=34        ....logica
+
+                .
+
+return(
+                .
+
+  <div>
+  <h1>hola mundo<h1/>              ...renderizado
+    <div/>
+                .
+)
+
+
+}
+
+
+
+para agregar calses se debe utilizar la classname en vez de class.
+
+se debe cerrar las etiquetas que no tengan cierre de esta forma:
+<img src png >
+<img src png />.
+
+
+para escribir en un return sin usar etiquetas padres se usa un fragment que es una apertura y cierre de una etiqueta vacia.
+ejemplo:
+<> 
+h2
+div
+body
+
+</>
+
+al escribir rafce se autocompleta el componente
