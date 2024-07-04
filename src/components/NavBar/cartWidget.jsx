@@ -1,10 +1,10 @@
 import React from 'react'
 
+
 const cartWidget = () => {
     return (
         <div>
-            <p>🛒</p>
-            <p>1</p>
+            <img src="" alt="" />
         </div>
     )
 }

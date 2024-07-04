@@ -1,14 +1,19 @@
-import NavBar from "./components/NavBar/NavBar"
+import NavBar from "./components/NavBar/NavBar.jsx"
+import Footer from "./components/Footer/Footer.jsx"
+import Main from "./components/Main/Main.jsx"
 
 
 function App() {
 
 
   return (
-  <div style={{backgroundColor: "black"}}>
-    <NavBar/>
+    <div style={{ backgroundColor: "black" }}>
 
-  </div>
+        <NavBar />
+        <Main />
+        <Footer />
+
+    </div>
   )
 }
 

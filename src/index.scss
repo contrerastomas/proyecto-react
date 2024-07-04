@@ -1,11 +1,8 @@
 
+@use "./scss/App.scss";
 @use "./scss/header.scss";
 @use "./scss/main.scss";
 @use "./scss/footer.scss";
 @use "./scss/variables.scss";
 
 
-
-body{
-    background-color: grey;
-}

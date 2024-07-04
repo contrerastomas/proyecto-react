@@ -1,0 +1,37 @@
+//footer 
+
+footer {
+    background-color: #000056;
+
+    grid-area: "footer";
+    display: flex;
+    gap: 10rem;
+    flex-direction: row;
+    padding: 1rem;
+    height: 20rem;
+    width: 100%;
+    .contenedorFooter {
+        h2 {
+            color: #de4126;
+            font-size: 2rem;
+            font-style: oblique;
+            font-family: 'ArcadeClassic', sans-serif;
+
+        }
+        p {
+            font-size: 1.2rem;
+            color: white;
+        }
+    }
+
+    #tarjetas {
+        padding: 2rem;
+
+        h3 {
+            color: #dcdcdc;
+        }
+        img {
+            width: 30rem;
+        }
+    }
+}
