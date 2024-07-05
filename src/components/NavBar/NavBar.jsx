@@ -21,7 +21,7 @@ const NavBar = () => {
                             <CartWidget nombre={instagramLogo} />
                             <CartWidget nombre={twitterLogo} />
                             <CartWidget nombre={facebookLogo} />
-                            {/*  
+                            {/*   aca profe quise importar las imagenes a travez de props pero no supe como arreglarlo.
                             <a className="itemLogos" href="#"><img src={instagramLogo} alt="" /></a>
                             <a className="itemLogos" href="#"><img src={twitterLogo} alt="" /></a>
                             <a className="itemLogos" href="#"><img src={facebookLogo} alt="" /></a>
