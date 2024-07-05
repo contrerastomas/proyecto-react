@@ -1,10 +1,10 @@
 import React from 'react'
 
 
-const cartWidget = () => {
+const cartWidget = (nombre) => {
     return (
         <div>
-            <img src="" alt="" />
+            <a className="itemLogos" href="#"><img src={nombre} alt="" /></a>
         </div>
     )
 }
