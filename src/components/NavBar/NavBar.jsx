@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import Items from './ItemListConteiner';
 import CartWidget from './CartWidget';
 import "./NavBar.scss";
 
@@ -18,14 +19,11 @@ const NavBar = () => {
                     <div className="contenedorTitulo">
                         <h1>Pixel Games</h1>
                         <div className="logosNavbar">
-                            <CartWidget nombre={instagramLogo} />
-                            <CartWidget nombre={twitterLogo} />
-                            <CartWidget nombre={facebookLogo} />
-                            {/*   aca profe quise importar las imagenes a travez de props pero no supe como arreglarlo.
-                            <a className="itemLogos" href="#"><img src={instagramLogo} alt="" /></a>
-                            <a className="itemLogos" href="#"><img src={twitterLogo} alt="" /></a>
-                            <a className="itemLogos" href="#"><img src={facebookLogo} alt="" /></a>
-                        */}
+                            <Items nombre={instagramLogo} />
+                            <Items nombre={twitterLogo} />
+                            <Items nombre={facebookLogo} />
+                                
+                            
                         </div>
                     </div>
                     <div className="barrabusqueda">
@@ -38,6 +36,9 @@ const NavBar = () => {
                             <input type="search" placeholder="¿Que tienes ganas de buscar hoy? " />
                             <button type="submit">Buscar</button>
                         </label>
+                        <div className='contenedorItems'>
+                            <CartWidget/>
+                            </div>
                     </div>
 
                 </nav>

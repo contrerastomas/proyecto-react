@@ -1,12 +1,13 @@
 import React from 'react'
+import { IoCart } from "react-icons/io5";
 
-
-const cartWidget = ({nombre}) => {
+const CartWidget = () => {
     return (
-        <div>
-            <a className="itemLogos" href="#"><img src={nombre} alt={nombre} /></a>
+        <div className='contenedorCarrito'>
+            <IoCart className='carrito'/>
+            <p>0</p>
         </div>
     )
 }
 
-export default cartWidget
+export default CartWidget

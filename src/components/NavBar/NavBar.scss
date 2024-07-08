@@ -43,45 +43,69 @@ header{
     
             .logosNavbar {
                 display: flex;
-                gap: 1rem;
-                margin-right: 2rem;
-                padding-top: 2rem;
-    
-                height: max-content;
+                flex-direction: row;
+                margin: 3rem;
+                gap: 2rem;
                 border-bottom: 2px solid #de4126;
-    
-                align-items: center;
-    
-                .itemLogos {
-    
-    
+                
+                    gap: 1rem;
                     img {
                         width: 3rem;
                         height: 3rem;
+                        &:hover{
+                            transform: scale(1.09);
+                        }
                     }
-    
-                }
-
             }
     
         }
     
         .barrabusqueda {
             display: flex;
-            gap: 20rem;
+            width: 100%;
+            justify-content: space-around;
             align-items: center;
-    
+            .contenedorItems{
+                .contenedorCarrito{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+                    align-items: center;
+                    border: red solid 2px;
+                    padding: 0px 1rem;
+                    background-color: black;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.09);
+                    }
+                    .carrito{
+                        color: white;
+                        font-size: 3rem;
+                        
+                    }
+                    p{
+                        font-size: 2rem;
+                        color: white;
+                    }
+                }
+            }
+            
             .barra {
                 width: 700px;
                 height: 40px;
                 display: flex;
                 position: relative;
                 gap: 5px;
-                
                 }
+
                 button{
                     font-size: 1.4rem;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.09);
+                    }
                 }
+
                 input {
                     width: 700px;
                     font-size: 1.5rem;
@@ -89,7 +113,6 @@ header{
                         text-align: center;
                         font-size: 1.3rem;
                 }
-
             }
 
             .inicio {
@@ -99,19 +122,11 @@ header{
                 &:hover {
                     border-bottom: 2px solid #de4126;
                     transform: scale(1.03);
-    
                 }
-    
             }
-    
-    
         }
-
-    
     }
 
-
-    
 }
 
 
