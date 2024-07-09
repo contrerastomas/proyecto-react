@@ -1,12 +1,52 @@
-main{
-    height: 30rem;
+main {
     background-image: url(../../assets/images/fondo.jpg);
     height: 100rem;
-    img{
-
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    .banner {
+        margin-top: 2rem;
         width: 100%;
         height: 25rem;
         object-fit: contain;
-        border-radius: 5rem;
+        background-color: rgba(0, 0, 0, 0.433);
+        backdrop-filter: blur(10px);
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 5s;
+        }
+
+
     }
+
+    .contenedorCards {
+        margin: 2rem;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        background-color: gray;
+        .card {
+            width: 10rem;
+
+            .cardImage {
+                width: 100%;
+            }
+            p{
+                font-size: 1.3rem;
+            }
+            button{
+                font-size: 1.4rem;
+                cursor: pointer;
+                }
+            .btn{
+                width: 3rem;
+            }
+
+        }
+
+    }
+
 }

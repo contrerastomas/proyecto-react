@@ -1,10 +1,9 @@
 import React from 'react'
 const Banner = ({nombre}) => {
 
-    console.log(nombre)
     return (
         <div>
-            <img src={nombre} alt={nombre} />
+            <img className='banner' src={nombre} alt={nombre} />
         </div>
     )
 }
