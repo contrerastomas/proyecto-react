@@ -1,9 +1,10 @@
 main {
-    background-image: url(../../assets/images/fondo.jpg);
-    height: 100rem;
+    height: 40rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background-color: rgb(132, 128, 128);
+
     gap: 5rem;
     .banner {
         margin-top: 2rem;
@@ -21,32 +22,5 @@ main {
 
     }
 
-    .contenedorCards {
-        margin: 2rem;
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-        justify-content: center;
-        background-color: gray;
-        .card {
-            width: 10rem;
-
-            .cardImage {
-                width: 100%;
-            }
-            p{
-                font-size: 1.3rem;
-            }
-            button{
-                font-size: 1.4rem;
-                cursor: pointer;
-                }
-            .btn{
-                width: 3rem;
-            }
-
-        }
-
-    }
 
 }
