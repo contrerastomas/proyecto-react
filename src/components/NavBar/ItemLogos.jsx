@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const cartWidget = ({nombre}) => {
+const ItemLogos = ({nombre}) => {
     return (
         <div>
             <a className="itemLogos" href="#"><img src={nombre} alt={nombre} /></a>
@@ -9,4 +9,4 @@ const cartWidget = ({nombre}) => {
     )
 }
 
-export default cartWidget
+export default ItemLogos

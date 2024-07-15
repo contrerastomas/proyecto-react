@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import Items from './ItemListConteiner';
+import Items from './ItemLogos';
 import CartWidget from './CartWidget';
 import "./NavBar.scss";
 
