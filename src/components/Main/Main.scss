@@ -1,9 +1,10 @@
 main {
-    height: 40rem;
+    height: 30rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: rgb(132, 128, 128);
+    background-color: rgb(20, 20, 20);
+    
 
     gap: 5rem;
     .banner {
@@ -11,7 +12,6 @@ main {
         width: 100%;
         height: 25rem;
         object-fit: contain;
-        background-color: rgba(0, 0, 0, 0.433);
         backdrop-filter: blur(10px);
 
         &:hover {
