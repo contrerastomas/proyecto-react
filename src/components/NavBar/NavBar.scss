@@ -63,8 +63,10 @@ header{
         .barrabusqueda {
             display: flex;
             width: 100%;
-            justify-content: space-around;
             align-items: center;
+            justify-content:  center;
+            gap: 11rem;
+            margin-top: 1rem;
             .contenedorItems{
                 .contenedorCarrito{
                     display: flex;
@@ -91,7 +93,7 @@ header{
             }
             
             .barra {
-                width: 700px;
+                width: 500px;
                 height: 40px;
                 display: flex;
                 position: relative;
@@ -109,16 +111,22 @@ header{
                 input {
                     width: 700px;
                     font-size: 1.5rem;
+                    color: dark;
+
                     &::placeholder{
                         text-align: center;
-                        font-size: 1.3rem;
+                        font-size: 1.5rem;
                 }
             }
-
+            ul{
+                display: flex;
+                flex-direction: row;
+            }
             .inicio {
                 list-style: none;
                 font-size: 2rem;
                 margin-left: 2rem;
+                color: white;
                 &:hover {
                     border-bottom: 2px solid #de4126;
                     transform: scale(1.03);

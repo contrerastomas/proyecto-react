@@ -1,22 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Contador = () => {
+const Contador = ({producto}) => {
+
+    
 
 const [contador,setContador]=useState(0)
 
 
-const aumentarContador = ()=>{
-
-    setContador(contador+1)
-}
-
-
-const disminuirContador = ()=>{
-    if(contador>0){
-        setContador(contador-1)
-
+    const aumentarContador = ()=>{
+        if(contador<producto.stock){
+    
+            setContador(contador+1)
+        }
+    
     }
-}
+    
+    const disminuirContador = ()=>{
+    
+        if(contador>0){
+            setContador(contador-1)
+    
+        }
+    }
 
     return (
         <div>

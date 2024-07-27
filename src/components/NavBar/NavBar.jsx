@@ -4,10 +4,13 @@ import React from 'react';
 import Items from './ItemLogos';
 import CartWidget from './CartWidget';
 import "./NavBar.scss";
-
 import instagramLogo from "../../assets/images/instagram.png";
 import twitterLogo from '../../assets/images/twitter.png';
 import facebookLogo from '../../assets/images/facebook.png';
+import { Link } from 'react-router-dom';
+
+
+
 
 const NavBar = () => {
 
@@ -17,7 +20,8 @@ const NavBar = () => {
             <header>
                 <nav className="navbar">
                     <div className="contenedorTitulo">
-                        <h1>Pixel Games</h1>
+                        <Link to={"/"}><h1>Pixel Games</h1></Link>
+                        
                         <div className="logosNavbar">
                             <Items nombre={instagramLogo} />
                             <Items nombre={twitterLogo} />
@@ -28,9 +32,9 @@ const NavBar = () => {
                     </div>
                     <div className="barrabusqueda">
                         <ul>
-                            <li className="inicio">
-                                <a href="./index.html">inicio</a>
-                            </li>
+                            <Link to={"/categoria/aventura"} ><li className="inicio">aventura</li></Link>
+                            <Link to={"/categoria/accion"} ><li className="inicio">accion</li></Link>
+                            <Link to={"/categoria/deportes"} ><li className="inicio">deportes</li></Link>
                         </ul>
                         <label className="barra">
                             <input type="search" placeholder="¿Que tienes ganas de buscar hoy? " />

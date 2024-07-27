@@ -3,20 +3,24 @@ import Footer from "./components/Footer/Footer.jsx"
 import Main from "./components/Main/Main.jsx"
 import ItemListContainer from "./components/ItemsListContainer/ItemListContainer.jsx"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 function App() {
 
 
   return (
-    <div className="contenedor">
+    <BrowserRouter>
 
-        <NavBar />
-        <Main />
-        <ItemListContainer/>
-        <ItemDetailContainer/>
-        <Footer />
+      <NavBar />
+      <Main />
 
-    </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
+        <Route path="/detalle/:idProducto" element={<ItemDetailContainer />} />
+      </Routes>
+      <Footer />
+
+    </BrowserRouter>
   )
 }
 

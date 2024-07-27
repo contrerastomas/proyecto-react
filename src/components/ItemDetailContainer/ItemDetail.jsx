@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Contador from '../Main/Contador'
 import "../ItemDetailContainer/ItemDetailContainer.scss"
 
-
 const ItemDetail = ({ producto }) => {
+
+
+
+
     return (
         <div className='itemDetail'>
             <div className='contenedorImagenDetail'>
@@ -22,7 +25,7 @@ const ItemDetail = ({ producto }) => {
                 </div>
 
                 <div className='dataContainer'>
-                    <Contador />
+                    <Contador/>
                     <button >agregar al carrito</button>
                 </div>
 
