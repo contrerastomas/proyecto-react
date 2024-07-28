@@ -4,6 +4,7 @@ import Main from "./components/Main/Main.jsx"
 import ItemListContainer from "./components/ItemsListContainer/ItemListContainer.jsx"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Formulario from "./components/Formulario/Formulario.jsx"
 function App() {
 
 
@@ -16,7 +17,9 @@ function App() {
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
-        <Route path="/detalle/:idProducto" element={<ItemDetailContainer />} />
+        
+        <Route path="/detalle/:idProducto" element={<ItemDetailContainer /> }/>
+      <Route  path="/formulario" element={<Formulario/>} />
       </Routes>
       <Footer />
 

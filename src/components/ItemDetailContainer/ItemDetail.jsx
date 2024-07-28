@@ -5,7 +5,10 @@ import "../ItemDetailContainer/ItemDetailContainer.scss"
 const ItemDetail = ({ producto }) => {
 
 
-
+    const agregarAlCarrito = (contador) => {
+        const productosCarrito = { ...producto, cantidad: contador }
+        console.log(productosCarrito)
+    }
 
     return (
         <div className='itemDetail'>
@@ -25,8 +28,8 @@ const ItemDetail = ({ producto }) => {
                 </div>
 
                 <div className='dataContainer'>
-                    <Contador/>
-                    <button >agregar al carrito</button>
+                    <Contador producto={producto} agregarAlCarrito={agregarAlCarrito} />
+
                 </div>
 
             </div>
