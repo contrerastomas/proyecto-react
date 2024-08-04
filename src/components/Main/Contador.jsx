@@ -26,14 +26,15 @@ const [contador,setContador]=useState(0)
     
 
     return (
-        <div>
-        <p>cantidad: {contador} </p>
-        <button className='btn' onClick={aumentarContador}>+</button>
-        <button className='btn' onClick={disminuirContador}>-</button>
-        <button className='btn' onClick={()=>agregarAlCarrito(contador)}>agregar al carrito</button>
-        
+        <div className="contador">
+            <p className="cantidad">Cantidad: {contador}</p>
+            <div className="botones">
+                <button className="btn" onClick={aumentarContador}>+</button>
+                <button className="btn" onClick={disminuirContador}>-</button>
+                <button className="btn agregar" onClick={() => agregarAlCarrito(contador)}> 🛒 </button>
+            </div>
         </div>
-    )
+    );
 }
 
 export default Contador

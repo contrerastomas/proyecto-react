@@ -1,20 +1,20 @@
 .contenedorCards {
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
     width: 100%;
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    height: 40rem;
+    height: max-content;
     padding: 1rem;
     background-color: rgb(20, 20, 20);
 
 
     .card {
         width: 15rem;
-        height: 37rem;
+        height: 32rem;
         padding: 1rem;
-        background-color: rgb(188, 188, 188);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -22,8 +22,8 @@
         text-align: center;
         justify-content: center;
         cursor: pointer;
-        color: black;
-        border: 2px solid limegreen;
+        color: rgb(219, 219, 219);
+        border: 5px solid #de4126;;
         &:hover{
             transform: scale(1.05);
         }
@@ -58,7 +58,7 @@
             background-color: white;
             color: black;
             &:hover{
-                background-color: limegreen;
+                background-color:#de4126;
                 color: white;
             }
         }

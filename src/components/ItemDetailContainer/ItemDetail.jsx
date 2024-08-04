@@ -1,13 +1,20 @@
 import React, { useEffect } from 'react'
 import Contador from '../Main/Contador'
 import "../ItemDetailContainer/ItemDetailContainer.scss"
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
+
+
 
 const ItemDetail = ({ producto }) => {
+
+    const {agregarProducto}=useContext(CartContext)
+
 
 
     const agregarAlCarrito = (contador) => {
         const productosCarrito = { ...producto, cantidad: contador }
-        console.log(productosCarrito)
+        agregarProducto(productosCarrito)
     }
 
     return (
