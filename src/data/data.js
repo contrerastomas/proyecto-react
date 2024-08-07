@@ -81,7 +81,7 @@ const videojuegos = [
         categoria:"deportes",
         descripcion: "Todo el poder de la franquicia Monster Jam está listo para aterrizar en tus manos, con una nueva y rompedora experiencia arcade todoterreno. Prepárate para correr a través de tres biomas diferentes y realizar tus mejores trucos conduciendo los camiones Monster Jam más icónicos de la historia.",
         imagen: "/img/MonsterJam.jpg",
-        nombre: "Monster Jam Showdown Day One Edition",
+        nombre: "Monster Jam Showdown",
         precio: 260,
         stock: 14,
     }

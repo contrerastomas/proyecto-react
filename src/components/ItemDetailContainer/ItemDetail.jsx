@@ -1,20 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Contador from '../Main/Contador'
 import "../ItemDetailContainer/ItemDetailContainer.scss"
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
-
+import { Link } from 'react-router-dom'
 
 
 const ItemDetail = ({ producto }) => {
 
-    const {agregarProducto}=useContext(CartContext)
-
+    const { agregarProducto } = useContext(CartContext)
+    const [mostrarContador, setMostrarContador] = useState(true)
 
 
     const agregarAlCarrito = (contador) => {
         const productosCarrito = { ...producto, cantidad: contador }
         agregarProducto(productosCarrito)
+    
+    //ocultamos el contador
+    setMostrarContador(false)
+    
     }
 
     return (
@@ -35,7 +39,10 @@ const ItemDetail = ({ producto }) => {
                 </div>
 
                 <div className='dataContainer'>
-                    <Contador producto={producto} agregarAlCarrito={agregarAlCarrito} />
+                    {
+                        mostrarContador ? (<Contador producto={producto} agregarAlCarrito={agregarAlCarrito} />) : (<Link className='link' to={"/carrito"}>ver carrito</Link>)
+                    }
+
 
                 </div>
 

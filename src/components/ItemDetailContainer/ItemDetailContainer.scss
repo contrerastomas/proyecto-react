@@ -115,3 +115,11 @@
     font-size: 2.5rem;
     color: white;
 }
+.link{
+    font-size: 2rem;
+    border-bottom:  1px solid #de4126;
+    width: 15rem;
+    &:hover{
+        font-size: 2.3rem;
+    }
+}
