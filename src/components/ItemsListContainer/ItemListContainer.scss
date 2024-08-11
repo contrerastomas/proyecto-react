@@ -23,7 +23,7 @@
         justify-content: center;
         cursor: pointer;
         color: rgb(219, 219, 219);
-        border: 5px solid #de4126;;
+        border: 5px solid #4caf50;
         &:hover{
             transform: scale(1.05);
         }
@@ -58,8 +58,7 @@
             background-color: white;
             color: black;
             &:hover{
-                background-color:#de4126;
-                color: white;
+                background-color: #4caf50;
             }
         }
     }

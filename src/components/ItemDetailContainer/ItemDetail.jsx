@@ -36,11 +36,12 @@ const ItemDetail = ({ producto }) => {
                 <div className='priceContainer'>
                     <p>{"stock:" + producto.stock} </p>
                     <p>Precio:{producto.precio} </p>
+                    <Link className="inicio" to={"/"} >volver</Link>
                 </div>
 
                 <div className='dataContainer'>
                     {
-                        mostrarContador ? (<Contador producto={producto} agregarAlCarrito={agregarAlCarrito} />) : (<Link className='link' to={"/carrito"}>ver carrito</Link>)
+                        mostrarContador ? (<Contador producto={producto} agregarAlCarrito={agregarAlCarrito} />) : (<Link className='link' to={"/carrito"}> Ver carrito</Link>)
                     }
 
 

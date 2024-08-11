@@ -23,7 +23,7 @@ header{
             align-items: center;
     
             h1 {
-                color: #de4126;
+                color: #4caf50;
                 font-size: 100px;
                 font-style: oblique;
                 font-family: 'ArcadeClassic', sans-serif;
@@ -35,7 +35,7 @@ header{
                 width: max-content;
     
                 &:hover {
-                    border-bottom: 2px solid #de4126;
+                    border-bottom: 2px solid  #4caf50;
                     transform: scale(1.03);
     
                 }
@@ -46,7 +46,7 @@ header{
                 flex-direction: row;
                 margin: 3rem;
                 gap: 2rem;
-                border-bottom: 2px solid #de4126;
+                border-bottom: 2px solid  #4caf50;
                 
                     gap: 1rem;
                     img {
@@ -73,7 +73,7 @@ header{
                     flex-direction: row;
                     gap: 1rem;
                     align-items: center;
-                    border: red solid 2px;
+                    border:  #4caf50 solid 2px;
                     padding: 0px 1rem;
                     background-color: black;
                     cursor: pointer;
@@ -128,7 +128,7 @@ header{
                 margin-left: 2rem;
                 color: white;
                 &:hover {
-                    border-bottom: 2px solid #de4126;
+                    border-bottom: 2px solid #4caf50;
                     transform: scale(1.03);
                 }
             }

@@ -13,7 +13,7 @@ const CartWidget = () => {
 
     return (
         <Link to={"/carrito"} className='contenedorCarrito'>
-            <IoCart className='carrito' />
+            <IoCart className='carrito' style={cantidad ===0 && {color:"blue"}} />
             <p>{cantidad > 0 && cantidad}</p>
         </Link>
     )

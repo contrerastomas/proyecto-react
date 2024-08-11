@@ -1,36 +1,79 @@
 import React from 'react'
 import "../ItemsListContainer/ItemListContainer.scss"
-import { obtenerProductos } from "../../data/data.js"
 import ItemList from './ItemList.jsx'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import CargandoPantalla from '../pantallaCarga/CargandoPantalla.jsx'
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import db from '../../db/db.js'
+
+
 
 const ItemListContainer = () => {
 
-    const [productos, setProductos] = useState([])
 
+
+    const [productos, setProductos] = useState([])
+    const [cargando, setCargando] = useState(false)
     const { idCategoria } = useParams()
 
-    useEffect(() => {
-        obtenerProductos()
-            .then((respuesta) => {
 
-                if (idCategoria) {
-                    const productosFiltrados = respuesta.filter((producto) => producto.categoria === idCategoria)
-                    setProductos(productosFiltrados)
 
-                } else {
-                    setProductos(respuesta)
+    const obtenerProductos = async () => {
 
+        try {
+            const productosRef = collection(db, "productos")
+            const dataDb = await getDocs(productosRef)
+            const data = dataDb.docs.map((productoDb) => {
+                return {
+                    id: productoDb.id, ...productoDb.data()
                 }
             })
-            .catch((error) => {
-                console.error(error)
-            })
-            .finally(() => {
-                console.log("promesa finalizada")
+            setProductos(data)
+            setCargando(false)
 
+
+        } catch (error) {
+            console.error(error);
+
+        }
+
+    }
+
+
+
+    const obtenerProductosCategoria = async () => {
+
+        try {
+            const productosRef = collection(db, "productos")
+            const q = query(productosRef, where("categoria", "==", idCategoria))
+            const dataDb = await getDocs(q)
+            const data = dataDb.docs.map((productoDb) => {
+                return {
+                    id: productoDb.id, ...productoDb.data()
+                }
             })
+            setProductos(data)
+            setCargando(false)
+
+        } catch (error) {
+            console.error(error);
+
+        }
+    }
+
+
+    useEffect(() => {
+        setCargando(true)
+
+        if (idCategoria) {
+            obtenerProductosCategoria()
+        } else {
+            obtenerProductos()
+
+        }
+
+
     }, [idCategoria])
 
 
@@ -41,7 +84,11 @@ const ItemListContainer = () => {
 
 
     return (
-        <ItemList productos={productos} />
+        <div>
+            {
+                cargando ? (<CargandoPantalla />) : (<ItemList productos={productos} />)
+            }
+        </div>
 
     )
 }

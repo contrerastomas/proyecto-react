@@ -1,5 +1,6 @@
 
-
+import { addDoc,collection } from "firebase/firestore"
+import db from "../db/db.js"
 
 const videojuegos = [
     {
@@ -144,17 +145,12 @@ const videojuegos = [
 
 ]
 
-
-const obtenerProductos = () => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(videojuegos)
-
-        }, 1000)
+const seedProducts =()=>{
+    videojuegos.map(({id, ...rest})=>{
+        const productosRef=collection(db,"productos")
+        addDoc(productosRef,rest)
     })
+    console.log("subio todo")
 }
 
-
-
-
-export { obtenerProductos }
+seedProducts()
