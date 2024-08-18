@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Items from './ItemLogos';
-import CartWidget from './CartWidget';
+import CartWidget from './CartWidget.jsx';
 import "./NavBar.scss";
 import instagramLogo from "../../assets/images/instagram.png";
 import twitterLogo from '../../assets/images/twitter.png';
