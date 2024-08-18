@@ -21,28 +21,28 @@ const Carrito = () => {
         <div className="carrito-container1" >
             <div className="carrito-container">
 
-            <ul className="carrito-lista">
-                {carrito.map((productoCarrito) => (
-                    <li className="carrito-item" key={productoCarrito.id}>
-                        <img width={150} src={productoCarrito.imagen} alt="" />
-                        <p>{productoCarrito.nombre} </p>
-                        <p>Cantidad: {productoCarrito.cantidad}</p>
-                        <p>Precio c/u: {productoCarrito.precio}</p>
-                        <p>Precio parcial: {productoCarrito.precio * productoCarrito.cantidad}</p>
-                        <button onClick={() => borrarProducto(productoCarrito.id)}>Quitar</button>
-                    </li>
-                ))}
-            </ul>
+                <ul className="carrito-lista">
+                    {carrito.map((productoCarrito) => (
+                        <li className="carrito-item" key={productoCarrito.id}>
+                            <img width={150} src={productoCarrito.imagen} alt="" />
+                            <p>{productoCarrito.nombre} </p>
+                            <p>Cantidad: {productoCarrito.cantidad}</p>
+                            <p>Precio c/u: {productoCarrito.precio}</p>
+                            <p>Precio parcial: {productoCarrito.precio * productoCarrito.cantidad}</p>
+                            <button onClick={() => borrarProducto(productoCarrito.id)}>Quitar</button>
+                        </li>
+                    ))}
+                </ul>
 
-            <div className="carrito-total">
-                <h3>Precio Total: {precioTotal()}</h3>
-                <button onClick={vaciarCarrito}>Vaciar carrito</button>
-                <Link className='terminar' to={"/checkout"}>Terminar Compra</Link>
-                <Link className="inicio" to={"/"} >volver</Link>
+                <div className="carrito-total">
+                    <h3>Precio Total: {precioTotal()}</h3>
+                    <button onClick={vaciarCarrito}>Vaciar carrito</button>
+                    <Link className='terminar' to={"/checkout"}>Terminar Compra</Link>
+                    <Link className="inicio" to={"/"} >volver</Link>
+                </div>
+
             </div>
 
-            </div>
-            
         </div>
     )
 }

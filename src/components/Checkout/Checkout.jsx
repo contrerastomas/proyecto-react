@@ -4,6 +4,8 @@ import { CartContext } from "../../context/CartContext"
 import { Timestamp, addDoc, collection } from 'firebase/firestore'
 import db from "../../db/db.js"
 import Formulario from "../Checkout/Formulario.jsx"
+import validarFormulario from '../../utils/validacionFormulario.js'
+import { toast } from 'react-toastify'
 
 
 const Checkout = () => {
@@ -11,7 +13,8 @@ const Checkout = () => {
     const [datosForm, setDatosForm] = useState({
         nombre: "",
         telefono: "",
-        email: ""
+        email: "",
+        repetirEmail: ""
     })
 
     const { carrito, precioTotal } = useContext(CartContext)
@@ -24,7 +27,7 @@ const Checkout = () => {
 
 
 
-    const handleSubmitForm = (event) => {
+    const handleSubmitForm = async (event) => {
         event.preventDefault()
         const orden = {
             comprador: { ...datosForm },
@@ -33,7 +36,16 @@ const Checkout = () => {
             total: precioTotal()
 
         }
-        sendOrder(orden)
+
+
+        const response = await validarFormulario(datosForm)
+        if (response.status === "success") {
+            sendOrder(orden)
+
+        } else {
+            toast.warning(response.message)
+        }
+
     }
 
 
@@ -47,7 +59,7 @@ const Checkout = () => {
 
 
         } catch (error) {
-            console.error(Error);
+            console.error(error);
         }
     }
 

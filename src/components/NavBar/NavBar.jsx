@@ -21,13 +21,13 @@ const NavBar = () => {
                 <nav className="navbar">
                     <div className="contenedorTitulo">
                         <Link to={"/"}><h1>Pixel Games</h1></Link>
-                        
+
                         <div className="logosNavbar">
                             <Items nombre={instagramLogo} />
                             <Items nombre={twitterLogo} />
                             <Items nombre={facebookLogo} />
-                                
-                            
+
+
                         </div>
                     </div>
                     <div className="barrabusqueda">
@@ -41,8 +41,8 @@ const NavBar = () => {
                             <button type="submit">Buscar</button>
                         </label>
                         <div className='contenedorItems'>
-                            <CartWidget/>
-                            </div>
+                            <CartWidget />
+                        </div>
                     </div>
 
                 </nav>
