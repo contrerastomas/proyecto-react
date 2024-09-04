@@ -18,4 +18,4 @@ Pixel Games es un ecommerse de videojuegos en donde puedes interactuar con una l
 
 ## Contacto
 
-<a href="https://www.linkedin.com/in/tomas-roberto-contreras?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3pii3VfbSKKUV2RRjwrI2g%3D%3D">Linkedin</a>
+<a href="https://www.linkedin.com/in/tomas-roberto-contreras?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3pii3VfbSKKUV2RRjwrI2g%3D%3D">Linkedin</a># contrerastomas-contrerastomas-Proyecto-React-Tomas-contreras2
