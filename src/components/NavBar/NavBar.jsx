@@ -36,10 +36,7 @@ const NavBar = () => {
                             <Link to={"/categoria/accion"} ><li className="inicio">accion</li></Link>
                             <Link to={"/categoria/deportes"} ><li className="inicio">deportes</li></Link>
                         </ul>
-                        <label className="barra">
-                            <input type="search" placeholder="¿Que tienes ganas de buscar hoy? " />
-                            <button type="submit">Buscar</button>
-                        </label>
+                        
                         <div className='contenedorItems'>
                             <CartWidget />
                         </div>
